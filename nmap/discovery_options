@@ -1,0 +1,20 @@
+'''
+Discovery Options
+1. Perform a Ping Only Scan: nmap -sP 192.168.0.1
+2. Don’t Ping: nmap -PN 192.168.0.1
+3. TCP SYN Ping: nmap -PS 192.168.0.1
+4. TCP ACK Ping: nmap -PA 192.168.0.1
+5. UDP Ping: nmap -PU 192.168.0.1
+6. SCTP INIT Ping: nmap -PY 192.168.0.1
+7. ICMP Echo Ping: nmap -PE 192.168.0.1
+8. ICMP Timestamp Ping: nmap -PP 192.168.0.1
+9. CMP Address Mask Ping: nmap -PM 192.168.0.1
+10. IP Protocol Ping: nmap -PO 192.168.0.1
+11. ARP Ping: nmap -PR 192.168.0.1
+12. Traceroute: nmap –traceroute 192.168.0.1
+13. Force Reverse DNS Resolution: nmap -R 192.168.0.1
+14. Disable Reverse DNS Resolution: nmap -n 192.168.0.1
+15. Alternative DNS Lookup: nmap –system-dns 192.168.0.1
+16. Manually Specify DNS Server(s): nmap –dns-servers 201.56.212.54 192.168.0.1
+17. Create a Host List: nmap -sL 192.168.0.1/24
+'''
