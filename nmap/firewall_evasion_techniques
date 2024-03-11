@@ -1,0 +1,12 @@
+'''
+Firewall Evasion Techniques
+1. Fragment Packets: nmap -f 192.168.0.1
+2. Specify a Specific MTU: nmap –mtu 32 192.168.0.
+3. Use a Decoy: nmap -D RND:10 192.168.0.1
+4. Idle Zombie Scan: nmap -sI 192.168.0.38
+5. Manually Specify a Source Port: nmap –source-port 10 192.168.0.1
+6. Append Random Data: nmap –data-length 2 192.168.0.1
+7. Randomize Target Scan Order: nmap –randomize-ho 192.168.0.1-20
+8. Spoof MAC Address: nmap –spoof-mac Cis 192.168.0.1
+9. Send Bad Checksums: nmap –badsum 192.168.0.1
+'''
