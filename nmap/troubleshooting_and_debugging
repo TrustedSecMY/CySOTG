@@ -1,12 +1,53 @@
-'''
 Troubleshooting And Debugging
-1. Getting Help: nmap -h
-2. Display Nmap Version: nmap -V
-3. Verbose Output: nmap -v 192.168.0.1
-4. Debugging: nmap -d 192.168.0.1
-5. Display Port State Reason: nmap –reason 192.168.0.1
-6. Only Display Open Ports: nmap –open 192.168.0.1
-7. Trace Packets: nmap –packet-trace 192.168.0.1
-8. Display Host Networking: nmap –iflist
-9. Specify a Network Interface: nmap -e eth0 192.168.0.1
-'''
+
+1. Getting Help (-h): 
+    This option displays the help menu, providing information about Nmap's usage, command-line options, and syntax.
+
+    Command: nmap -h
+
+2. Display Nmap Version (-V): 
+    This option displays the version of Nmap installed on the system.
+
+    Command: nmap -V
+
+3. Verbose Output (-v): 
+    This option increases the verbosity of Nmap's output, providing more detailed information about the scanning process, 
+    including open ports, service versions, and scan progress.
+
+    Command: nmap -v 192.168.0.1
+
+4. Debugging (-d): 
+    This option enables debugging mode, which provides even more detailed information about the scanning process, 
+    including packet traces and internal operations.
+
+    Command: nmap -d 192.168.0.1
+
+5. Display Port State Reason (--reason): 
+    This option displays the reason why a port is in a particular state (open, closed, filtered, etc.), 
+    providing insight into the scan results.
+
+    Command: nmap --reason 192.168.0.1
+
+6. Only Display Open Ports (--open): 
+    This option instructs Nmap to only display ports that are determined to be open during the scan, 
+    filtering out closed and filtered ports from the output.
+
+    Command: nmap --open 192.168.0.1
+
+7. Trace Packets (--packet-trace): 
+    This option traces the packets sent and received during the scan, 
+    providing detailed information about the network communication involved in the scanning process.
+  
+    Command: nmap --packet-trace 192.168.0.1
+
+8. Display Host Networking (--iflist): 
+    This option displays information about the network interfaces available on the scanning system, 
+    including IP addresses, MAC addresses, and interface names.
+
+    Command: nmap --iflist
+
+9. Specify a Network Interface (-e): 
+    This option allows you to specify a network interface to use for the scan. 
+    It's useful when scanning from a system with multiple network interfaces.
+
+    Command: nmap -e eth0 192.168.0.1
