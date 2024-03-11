@@ -6,4 +6,88 @@ Basic Scanning Commands
 4. Scan an Entire Subnet: nmap 192.168.0.1/24
 5. Scan Random Hosts: nmap -iR 0
 6. Excluding Targets from a Scan: nmap 192.168.0.1/24 –exclude 192.168.0.100, 192.168.0.200
+7. Excluding Targets Using a List: nmap 192.168.0.1/24 –excludefile notargets.txt
+8. Perform an Aggressive Scan: nmap -A 192.168.0.1
+9. Scan an IPv6 Target: nmap -6 1aff:3c21:47b1:0000:0000:0000:0000:2afe
+
+Discovery Options
+1. Perform a Ping Only Scan: nmap -sP 192.168.0.1
+2. Don’t Ping: nmap -PN 192.168.0.1
+3. TCP SYN Ping: nmap -PS 192.168.0.1
+4. TCP ACK Ping: nmap -PA 192.168.0.1
+5. UDP Ping: nmap -PU 192.168.0.1
+6. SCTP INIT Ping: nmap -PY 192.168.0.1
+7. ICMP Echo Ping:	nmap -PE 192.168.0.1
+8. ICMP Timestamp Ping: nmap -PP 192.168.0.1
+9. CMP Address Mask Ping: nmap -PM 192.168.0.1
+10. IP Protocol Ping: nmap -PO 192.168.0.1
+11. ARP Ping: nmap -PR 192.168.0.1
+12. Traceroute: nmap –traceroute 192.168.0.1
+13. Force Reverse DNS Resolution: nmap -R 192.168.0.1
+14. Disable Reverse DNS Resolution: nmap -n 192.168.0.1
+15. Alternative DNS Lookup: nmap –system-dns 192.168.0.1
+16. Manually Specify DNS Server(s): nmap –dns-servers 201.56.212.54 192.168.0.1
+17. Create a Host List: nmap -sL 192.168.0.1/24
+
+Advanced Scanning Options
+1. TCP SYN Scan: nmap -sS 192.168.0.1
+2. TCP Connect Scan: nmap -sT 192.168.0.1
+3. UDP Scan: nmap -sU 192.168.0.1
+4. TCP NULL Scan: nmap -sN 192.168.0.1
+5. TCP FIN Scan: nmap -sF 192.168.0.1
+6. Xmas Scan: nmap -sX 192.168.0.1
+7. TCP ACK Scan: nmap -sA 192.168.0.1
+8. Custom TCP Scan: nmap –scanflags SYNFIN 192.168.0.1
+9. IP Protocol Scan: nmap -sO 192.168.0.1
+10. Send Raw Ethernet Packets: nmap –send-eth 192.168.0.1
+11. Send IP Packets: nmap –send-ip 192.168.0.1
+
+Port Scanning Options
+1. Perform a Fast Scan: nmap -F 192.168.0.1
+2. Scan Specific Ports: nmap -p 21-25,80,139,8080 192.168.1.1
+3. Scan Ports by Name: nmap -p ftp,http* 192.168.0.1
+4. Scan Ports by Protocol: nmap -sU -sT -p U:53,111,137,T:21- 25,80,139,8080 192.168.0.1
+5. Scan All Ports: nmap -p ‘*’ 192.168.0.1
+6. Scan Top Ports: nmap –top-ports 10 192.168.0.1
+7. Perform a Sequential Port Scan: nmap -r 192.168.0.1
+
+Version Detection
+1. Operating System Detection: nmap -O 192.168.0.1
+2. Submit TCP/IP Fingerprints: www.nmap.org/submit/Fingerprints	
+3. Attempt to Guess an Unknown OS: nmap -O –osscan-guess 192.168.0.1
+4. Service Version Detection: nmap -sV 192.168.0.1
+5. Troubleshooting Version Scans: nmap -sV –version-trace 192.168.0.1
+6. Perform a RPC Scan: nmap -sR 192.168.0.1
+
+Firewall Evasion Techniques
+1. Fragment Packets: nmap -f 192.168.0.1
+2. Specify a Specific MTU: nmap –mtu 32 192.168.0.
+3. Use a Decoy: nmap -D RND:10 192.168.0.1
+4. Idle Zombie Scan: nmap -sI 192.168.0.38
+5. Manually Specify a Source Port: nmap –source-port 10 192.168.0.1
+6. Append Random Data: nmap –data-length 2 192.168.0.1
+7. Randomize Target Scan Order: nmap –randomize-ho 192.168.0.1-20
+8. Spoof MAC Address: nmap –spoof-mac Cis 192.168.0.1
+9. Send Bad Checksums: nmap –badsum 192.168.0.1
+
+Troubleshooting And Debugging
+1. Getting Help: nmap -h
+2. Display Nmap Version: nmap -V
+3. Verbose Output: nmap -v 192.168.0.1
+4. Debugging: nmap -d 192.168.0.1
+5. Display Port State Reason: nmap –reason 192.168.0.1
+6. Only Display Open Ports: nmap –open 192.168.0.1
+7. Trace Packets: nmap –packet-trace 192.168.0.1
+8. Display Host Networking: nmap –iflist
+9. Specify a Network Interface: nmap -e eth0 192.168.0.1
+
+NMAP Scripting Engine
+1. Execute Individual Scripts: nmap –script banner.nse 192.168.0.1
+2. Execute Multiple Scripts: nmap –script ‘http-*’ 192.168.0.1
+3. Script Categories: all, auth, default, discovery, external, intrusive, malware, safe, vuln	
+4. Execute Scripts by Category: nmap –script ‘not intrusive’ 192.168.0.1
+5. Execute Multiple Script Categories: nmap –script ‘default or safe’ 192.168.0.1
+6. Troubleshoot Scripts: nmap –script banner.nse –script-trace 192.168.0.1
+7. Update the Script Database: nmap –script-updatedb
+
 '''
