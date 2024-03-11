@@ -13,6 +13,19 @@ import_gpg_keys() {
     sudo apt-key add /tmp/kali-archive-key.asc
 }
 
+# Function to remove Kali Linux repositories and GPG keys
+remove_kali_repositories() {
+    echo "Removing Kali Linux repositories and GPG keys..."
+    sudo rm /etc/apt/sources.list.d/kali.list
+    sudo apt-key del ED444FF07D8D0BF6
+}
+
+# Function to update repositories
+update_repositories() {
+    echo "Updating repositories..."
+    sudo apt-get update
+}
+
 # Function to list Kali tools
 list_kali_tools() {
     echo "Listing Kali Linux tools..."
@@ -34,22 +47,37 @@ install_tool_individually() {
 }
 
 # Main script
-add_kali_repositories
-import_gpg_keys
+echo "Choose an action:"
+echo "1. Add Kali repositories and import GPG keys"
+echo "2. Remove Kali repositories and GPG keys"
+echo "3. Update repositories"
+echo "4. List Kali Linux tools"
+echo "5. Install Kali Linux tools by group"
+echo "6. Install Kali Linux tools individually"
+read choice
 
-echo "Do you want to list Kali Linux tools? (yes/no)"
-read list_tools_choice
-if [[ $list_tools_choice == "yes" ]]; then
-    list_kali_tools
-fi
-
-echo "Do you want to install Kali Linux tools by group or individually? (group/individual)"
-read install_choice
-if [[ $install_choice == "group" ]]; then
-    install_tools_by_group
-elif [[ $install_choice == "individual" ]]; then
-    install_tool_individually
-else
-    echo "Invalid choice. Exiting..."
-    exit 1
-fi
+case $choice in
+    1)
+        add_kali_repositories
+        import_gpg_keys
+        ;;
+    2)
+        remove_kali_repositories
+        ;;
+    3)
+        update_repositories
+        ;;
+    4)
+        list_kali_tools
+        ;;
+    5)
+        install_tools_by_group
+        ;;
+    6)
+        install_tool_individually
+        ;;
+    *)
+        echo "Invalid choice. Exiting..."
+        exit 1
+        ;;
+esac
