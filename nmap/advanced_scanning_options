@@ -1,4 +1,3 @@
-'''
 Advanced Scanning Options
 1. TCP SYN Scan: nmap -sS 192.168.0.1
 2. TCP Connect Scan: nmap -sT 192.168.0.1
@@ -11,4 +10,59 @@ Advanced Scanning Options
 9. IP Protocol Scan: nmap -sO 192.168.0.1
 10. Send Raw Ethernet Packets: nmap –send-eth 192.168.0.1
 11. Send IP Packets: nmap –send-ip 192.168.0.1
-'''
+
+TCP SYN Scan (-sS): This scan technique sends SYN packets to initiate a TCP connection with the target ports. If a SYN-ACK packet is received in response, it indicates the port is open. If a RST packet is received, the port is closed. This scan is stealthy and fast.
+
+bash
+Copy code
+nmap -sS 192.168.0.1
+TCP Connect Scan (-sT): This scan type performs a full TCP connection to each specified port. It's less stealthy compared to the SYN scan because it completes the full TCP handshake, making it more easily detectable by intrusion detection systems.
+
+bash
+Copy code
+nmap -sT 192.168.0.1
+UDP Scan (-sU): This scan technique is used to find open UDP ports on the target system. UDP scans are slower and less reliable than TCP scans due to the connectionless nature of UDP.
+
+bash
+Copy code
+nmap -sU 192.168.0.1
+TCP NULL Scan (-sN): This scan sends TCP packets with no flags set (NULL packets). It relies on how the target's TCP/IP stack responds to these packets. If the port is open, no response should be received. If the port is closed, a RST packet should be received.
+
+bash
+Copy code
+nmap -sN 192.168.0.1
+TCP FIN Scan (-sF): Similar to the NULL scan, this scan sends TCP packets with only the FIN flag set. It's used to determine how the target system responds to these packets.
+
+bash
+Copy code
+nmap -sF 192.168.0.1
+Xmas Scan (-sX): This scan sends packets with the FIN, PSH, and URG flags set. It's called "Xmas" because of the combination of these flags, resembling the blinking lights on a Christmas tree.
+
+bash
+Copy code
+nmap -sX 192.168.0.1
+TCP ACK Scan (-sA): This scan sends packets with only the ACK flag set. It's used to determine how the target system responds to ACK packets. It's often used to bypass firewall rules.
+
+bash
+Copy code
+nmap -sA 192.168.0.1
+Custom TCP Scan (--scanflags): This option allows you to specify custom TCP flags for the scan. In this example, the SYNFIN flag combination is specified.
+
+bash
+Copy code
+nmap --scanflags SYNFIN 192.168.0.1
+IP Protocol Scan (-sO): This scan is used to determine which IP protocols (such as ICMP, TCP, UDP) are supported by the target. It sends IP packets with different IP protocol numbers and analyzes the response.
+
+bash
+Copy code
+nmap -sO 192.168.0.1
+Send Raw Ethernet Packets (--send-eth): This option instructs Nmap to send raw Ethernet packets instead of using the operating system's network stack. It can be useful for low-level network testing and troubleshooting.
+
+bash
+Copy code
+nmap --send-eth 192.168.0.1
+Send IP Packets (--send-ip): Similar to the previous option, this instructs Nmap to send raw IP packets directly rather than using the operating system's network stack.
+
+bash
+Copy code
+nmap --send-ip 192.168.0.1
