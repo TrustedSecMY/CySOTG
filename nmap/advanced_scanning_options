@@ -1,3 +1,14 @@
 '''
 Advanced Scanning Options
+1. TCP SYN Scan: nmap -sS 192.168.0.1
+2. TCP Connect Scan: nmap -sT 192.168.0.1
+3. UDP Scan: nmap -sU 192.168.0.1
+4. TCP NULL Scan: nmap -sN 192.168.0.1
+5. TCP FIN Scan: nmap -sF 192.168.0.1
+6. Xmas Scan: nmap -sX 192.168.0.1
+7. TCP ACK Scan: nmap -sA 192.168.0.1
+8. Custom TCP Scan: nmap –scanflags SYNFIN 192.168.0.1
+9. IP Protocol Scan: nmap -sO 192.168.0.1
+10. Send Raw Ethernet Packets: nmap –send-eth 192.168.0.1
+11. Send IP Packets: nmap –send-ip 192.168.0.1
 '''
