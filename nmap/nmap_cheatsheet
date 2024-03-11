@@ -17,7 +17,7 @@ Discovery Options
 4. TCP ACK Ping: nmap -PA 192.168.0.1
 5. UDP Ping: nmap -PU 192.168.0.1
 6. SCTP INIT Ping: nmap -PY 192.168.0.1
-7. ICMP Echo Ping:	nmap -PE 192.168.0.1
+7. ICMP Echo Ping: nmap -PE 192.168.0.1
 8. ICMP Timestamp Ping: nmap -PP 192.168.0.1
 9. CMP Address Mask Ping: nmap -PM 192.168.0.1
 10. IP Protocol Ping: nmap -PO 192.168.0.1
