@@ -1,0 +1,9 @@
+'''
+Version Detection
+1. Operating System Detection: nmap -O 192.168.0.1
+2. Submit TCP/IP Fingerprints: www.nmap.org/submit/Fingerprints	
+3. Attempt to Guess an Unknown OS: nmap -O –osscan-guess 192.168.0.1
+4. Service Version Detection: nmap -sV 192.168.0.1
+5. Troubleshooting Version Scans: nmap -sV –version-trace 192.168.0.1
+6. Perform a RPC Scan: nmap -sR 192.168.0.1
+'''
