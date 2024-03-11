@@ -1,1 +1,8 @@
 NMAP Scripting Engine
+1. Execute Individual Scripts: nmap –script banner.nse 192.168.0.1
+2. Execute Multiple Scripts: nmap –script ‘http-*’ 192.168.0.1
+3. Script Categories: all, auth, default, discovery, external, intrusive, malware, safe, vuln	
+4. Execute Scripts by Category: nmap –script ‘not intrusive’ 192.168.0.1
+5. Execute Multiple Script Categories: nmap –script ‘default or safe’ 192.168.0.1
+6. Troubleshoot Scripts: nmap –script banner.nse –script-trace 192.168.0.1
+7. Update the Script Database: nmap –script-updatedb
