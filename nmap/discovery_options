@@ -47,48 +47,54 @@ Discovery Options
 
     Command: nmap -PP 192.168.0.1
 
-ICMP Address Mask Ping (-PM): Sends ICMP address mask request packets to the target(s) and waits for ICMP address mask reply packets.
+9. ICMP Address Mask Ping (-PM): 
+    Sends ICMP address mask request packets to the target(s) and waits for ICMP address mask reply packets.
 
-bash
-Copy code
-nmap -PM 192.168.0.1
-IP Protocol Ping (-PO): Sends IP protocol packets to the target(s) and waits for responses. It can help identify which IP protocols are supported by the target(s).
+    Command: nmap -PM 192.168.0.1
 
-bash
-Copy code
-nmap -PO 192.168.0.1
-ARP Ping (-PR): This method uses ARP requests to determine if hosts are online within the local network segment. It's particularly useful for local network scans.
+10. IP Protocol Ping (-PO): 
+    Sends IP protocol packets to the target(s) and waits for responses. 
+    It can help identify which IP protocols are supported by the target(s).
 
-bash
-Copy code
-nmap -PR 192.168.0.1
-Traceroute (--traceroute): This option performs a traceroute to the target(s), showing the path packets take to reach the target(s), including the IP addresses of intermediate routers.
+    Command: nmap -PO 192.168.0.1
 
-bash
-Copy code
-nmap --traceroute 192.168.0.1
-Force Reverse DNS Resolution (-R): Forces Nmap to perform reverse DNS resolution for each scanned IP address, displaying the resolved domain names in the output.
+11. ARP Ping (-PR): 
+    This method uses ARP requests to determine if hosts are online within the local network segment. 
+    It's particularly useful for local network scans.
 
-bash
-Copy code
-nmap -R 192.168.0.1
-Disable Reverse DNS Resolution (-n): This option tells Nmap not to perform reverse DNS resolution, which can speed up the scanning process.
+    Command: nmap -PR 192.168.0.1
 
-bash
-Copy code
-nmap -n 192.168.0.1
-Alternative DNS Lookup (--system-dns): Uses the system's DNS resolver instead of Nmap's internal DNS resolver.
+12. Traceroute (--traceroute): 
+    This option performs a traceroute to the target(s), 
+    showing the path packets take to reach the target(s), 
+    including the IP addresses of intermediate routers.
 
-bash
-Copy code
-nmap --system-dns 192.168.0.1
-Manually Specify DNS Server(s) (--dns-servers): Allows you to manually specify DNS servers to use for reverse DNS resolution.
+    Command: nmap --traceroute 192.168.0.1
 
-bash
-Copy code
-nmap --dns-servers 201.56.212.54 192.168.0.1
-Create a Host List (-sL): This option simply lists the target(s) without performing any actual scanning. It's useful for generating a list of hosts for further analysis.
+13. Force Reverse DNS Resolution (-R): 
+    Forces Nmap to perform reverse DNS resolution for each scanned IP address, 
+    displaying the resolved domain names in the output.
 
-bash
-Copy code
-nmap -sL 192.168.0.1/24
+    Command: nmap -R 192.168.0.1
+
+14. Disable Reverse DNS Resolution (-n): 
+    This option tells Nmap not to perform reverse DNS resolution, 
+    which can speed up the scanning process.
+    
+    Command: nmap -n 192.168.0.1
+
+15. Alternative DNS Lookup (--system-dns): 
+    Uses the system's DNS resolver instead of Nmap's internal DNS resolver.
+
+    Command: nmap --system-dns 192.168.0.1
+
+16. Manually Specify DNS Server(s) (--dns-servers):
+    Allows you to manually specify DNS servers to use for reverse DNS resolution.
+
+    Command: nmap --dns-servers 201.56.212.54 192.168.0.1
+
+17. Create a Host List (-sL): 
+    This option simply lists the target(s) without performing any actual scanning. 
+    It's useful for generating a list of hosts for further analysis.
+
+    Command: nmap -sL 192.168.0.1/24
