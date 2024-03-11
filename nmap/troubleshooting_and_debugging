@@ -1,0 +1,12 @@
+'''
+Troubleshooting And Debugging
+1. Getting Help: nmap -h
+2. Display Nmap Version: nmap -V
+3. Verbose Output: nmap -v 192.168.0.1
+4. Debugging: nmap -d 192.168.0.1
+5. Display Port State Reason: nmap –reason 192.168.0.1
+6. Only Display Open Ports: nmap –open 192.168.0.1
+7. Trace Packets: nmap –packet-trace 192.168.0.1
+8. Display Host Networking: nmap –iflist
+9. Specify a Network Interface: nmap -e eth0 192.168.0.1
+'''
