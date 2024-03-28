@@ -1,8 +1,8 @@
-CySOTG
-Cyber Security On The Go
+CySSOTG - Cyber Security Suite On The Go
 
 Objective: 
-To make cyber defence as easy as possible using portable tools that a cyber defender/pentester/security auditor can use anytime anywhere, based on 5 pillar of NIST Cybersecurity Framework.
+CySSOTG represents a portable suite, creatively tailored for cyber security professionals and ethical hackers who focus on defensive security strategies. 
+As a portable security suite, CySSOTG uniquely positioned to address the needs of its target audience by leveraging the NIST Cybersecurity Framework.
 
 License:
 Open Source
